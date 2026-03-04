@@ -22,8 +22,8 @@ const serviceLinks = [
 ];
 
 const socials = [
-  { icon: <Linkedin size={18} />, href: "https://linkedin.com/company/cascade-technologies", label: "LinkedIn" },
-  { icon: <Instagram size={18} />, href: "https://instagram.com/Cascade_Teachno", label: "Instagram" },
+  { icon: <Linkedin size={18} />, href: "https://www.linkedin.com/in/cascade-technologies-solutions-7275b63b2", label: "LinkedIn" },
+  { icon: <Instagram size={18} />, href: "https://www.instagram.com/cascade_techno?utm_source=qr&igsh=MW94NzV3ZjdoM21lMQ==", label: "Instagram" },
 ];
 
 export function Footer() {

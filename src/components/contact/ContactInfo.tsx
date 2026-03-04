@@ -71,7 +71,7 @@ export function ContactInfo() {
                         className="w-10 h-10 rounded-lg bg-cascade-deep border border-cascade-border flex items-center justify-center text-text-secondary hover:text-cascade-blue hover:border-cascade-blue/40 transition-all duration-300">
                         <Twitter size={18} />
                     </a>
-                    <a href="https://linkedin.com/company/cascade-technologies" target="_blank" rel="noopener noreferrer"
+                    <a href="https://www.linkedin.com/in/cascade-technologies-solutions-7275b63b2" target="_blank" rel="noopener noreferrer"
                         className="w-10 h-10 rounded-lg bg-cascade-deep border border-cascade-border flex items-center justify-center text-text-secondary hover:text-cascade-blue hover:border-cascade-blue/40 transition-all duration-300">
                         <Linkedin size={18} />
                     </a>
@@ -79,7 +79,7 @@ export function ContactInfo() {
                         className="w-10 h-10 rounded-lg bg-cascade-deep border border-cascade-border flex items-center justify-center text-text-secondary hover:text-cascade-blue hover:border-cascade-blue/40 transition-all duration-300">
                         <Github size={18} />
                     </a>
-                    <a href="https://instagram.com/Cascade_Teachno" target="_blank" rel="noopener noreferrer"
+                    <a href="https://www.instagram.com/cascade_techno?utm_source=qr&igsh=MW94NzV3ZjdoM21lMQ==" target="_blank" rel="noopener noreferrer"
                         className="w-10 h-10 rounded-lg bg-cascade-deep border border-cascade-border flex items-center justify-center text-text-secondary hover:text-cascade-blue hover:border-cascade-blue/40 transition-all duration-300">
                         <Instagram size={18} />
                     </a>
