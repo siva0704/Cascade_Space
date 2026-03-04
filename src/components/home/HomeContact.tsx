@@ -57,8 +57,8 @@ export function HomeContact() {
                                 </div>
                                 <div>
                                     <h4 className="text-text-primary font-semibold mb-1">{t('headings', 'emailUs')}</h4>
-                                    <a href="mailto:contact@cascadespace.com" className="text-text-secondary hover:text-cascade-blue transition-colors text-sm break-all">
-                                        contact@cascadespace.com
+                                    <a href="mailto:cascadetechnologiessolutions@gmail.com" className="text-text-secondary hover:text-cascade-blue transition-colors text-sm break-all">
+                                        cascadetechnologiessolutions@gmail.com
                                     </a>
                                 </div>
                             </div>

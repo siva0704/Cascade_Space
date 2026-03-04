@@ -15,9 +15,8 @@ export function ContactInfo() {
                     </div>
                     <div>
                         <h4 className="text-text-primary font-bold mb-1">{t('headings', 'infoEmail')}</h4>
-                        <a href="mailto:contact@cascadespace.com" className="text-text-secondary hover:text-cascade-blue transition-colors text-sm block">
-                            contact@cascadespace.com
-                        </a>
+                        <a href="mailto:cascadetechnologiessolutions@gmail.com" className="text-text-secondary hover:text-cascade-blue transition-colors text-sm block">
+                            cascadetechnologiessolutions@gmail.com                        </a>
                     </div>
                 </GlassCard>
             </motion.div>

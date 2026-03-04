@@ -12,7 +12,7 @@ const executives = [
     role: "Chief Executive Officer",
     imageAbbr: "AK",
     bioKey: "akshayBio",
-    email: "akshay@cascadetech.com",
+    email: "cascadetechnologiessolutions@gmail.com",
     linkedin: "https://www.linkedin.com/in/akshaykumar-ankalagi-10b37933a",
   },
   {
@@ -21,7 +21,7 @@ const executives = [
     role: "Chief Operating Officer",
     imageAbbr: "MR",
     bioKey: "manojBio",
-    email: "manoj@cascadetech.com",
+    email: "cascadetechnologiessolutions@gmail.com",
     linkedin: "https://www.linkedin.com/in/manojrelekar3/",
   },
   {
@@ -30,7 +30,7 @@ const executives = [
     role: "Chief Technology Officer",
     imageAbbr: "VB",
     bioKey: "vaibhavaBio",
-    email: "vaibhava@cascadetech.com",
+    email: "cascadetechnologiessolutions@gmail.com",
     linkedin: "https://www.linkedin.com/in/vaibhav-b-g-284b63346",
   },
 ];
