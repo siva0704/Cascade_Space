@@ -5,6 +5,7 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { GridBackground } from "@/components/ui/GridBackground";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/locales/translations";
 
 export function ServicesPreview() {
     const { t, lang } = useLanguage();

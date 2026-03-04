@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Globe, Layers, Cpu, Bot, Award, GraduationCap } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/locales/translations";
 
 export function AllServicesGrid() {
     const { t, lang } = useLanguage();
