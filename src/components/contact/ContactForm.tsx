@@ -4,7 +4,8 @@ import { Send, CheckCircle, AlertCircle, User, Mail, Phone, Building2, Briefcase
 import { GlassCard } from "@/components/ui/GlassCard";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx7IsxuwK9k5MJE9mnY2GCEXyXXcsVeXyo-6SEfAn3fmOeVqTJGw4oGAzq8HAlp6HFysw/exec";
+// Kiro reference: VITE_APPS_SCRIPT_URL must be set in .env.local (dev) or Vercel env vars (prod)
+const APPS_SCRIPT_URL = import.meta.env.VITE_APPS_SCRIPT_URL as string;
 
 const SERVICE_OPTIONS = [
     "Digital Transformation",
