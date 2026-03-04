@@ -64,35 +64,45 @@ export function TechBridge() {
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10">
                             {/* Project Card 1 */}
-                            <GlassCard className="sm:-translate-y-4 hover:-translate-y-6 flex flex-col h-full bg-cascade-deep">
-                                <div className="w-12 h-12 rounded-lg bg-cascade-blue/20 flex items-center justify-center text-cascade-blue font-bold text-xl mb-6">
+                            <GlassCard className="sm:-translate-y-4 hover:-translate-y-6 flex flex-col h-full bg-cascade-deep/50 p-8 relative overflow-hidden group transition-all duration-500 border border-cascade-border/50">
+                                {/* Wireframe grid overlay */}
+                                <div className="absolute inset-0 bg-[linear-gradient(rgba(14,165,233,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(14,165,233,0.03)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                                <div className="w-12 h-12 rounded-xl bg-cascade-blue/20 flex items-center justify-center text-cascade-blue font-bold text-xl mb-6 relative z-10 border border-cascade-blue/30 group-hover:scale-110 transition-transform duration-300">
                                     S
                                 </div>
-                                <h3 className="text-xl font-bold text-text-primary mb-2">Startopia</h3>
-                                <p className="text-text-secondary text-sm mb-6 flex-grow">
+                                <h3 className="text-xl font-bold text-text-primary mb-3 relative z-10 group-hover:text-cascade-blue transition-colors">Startopia</h3>
+                                <p className="text-text-secondary text-sm mb-6 flex-grow relative z-10 opacity-90 leading-relaxed">
                                     {/* @ts-ignore */}
                                     {translations[lang]?.body?.startopiaShortDesc || "A comprehensive ecosystem designed to empower founders with resources and scalable platforms."}
                                 </p>
-                                <div className="flex flex-wrap gap-2 mt-auto">
-                                    <span className="px-2 py-1 text-xs font-mono text-cascade-cyan bg-cascade-cyan/10 rounded-md">React</span>
-                                    <span className="px-2 py-1 text-xs font-mono text-cascade-indigo bg-cascade-indigo/10 rounded-md">Node.js</span>
+                                <div className="flex flex-wrap gap-2 mt-auto relative z-10">
+                                    <span className="px-2 py-1 text-[10px] font-mono tracking-tighter text-cascade-cyan bg-cascade-cyan/10 border border-cascade-cyan/20 rounded-md">REACT_CORE</span>
+                                    <span className="px-2 py-1 text-[10px] font-mono tracking-tighter text-cascade-indigo bg-cascade-indigo/10 border border-cascade-indigo/20 rounded-md">NODE_OS</span>
                                 </div>
+
+                                <div className="absolute top-0 right-0 w-12 h-12 border-r border-t border-cascade-blue/20 rounded-tr-2xl pointer-events-none" />
                             </GlassCard>
 
                             {/* Project Card 2 */}
-                            <GlassCard className="sm:translate-y-8 hover:translate-y-6 flex flex-col h-full bg-cascade-deep">
-                                <div className="w-12 h-12 rounded-lg bg-cascade-cyan/20 flex items-center justify-center text-cascade-cyan font-bold text-xl mb-6">
+                            <GlassCard className="sm:translate-y-8 hover:translate-y-6 flex flex-col h-full bg-cascade-deep/50 p-8 relative overflow-hidden group transition-all duration-500 border border-cascade-border/50">
+                                {/* Wireframe grid overlay */}
+                                <div className="absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.03)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                                <div className="w-12 h-12 rounded-xl bg-cascade-cyan/20 flex items-center justify-center text-cascade-cyan font-bold text-xl mb-6 relative z-10 border border-cascade-cyan/30 group-hover:scale-110 transition-transform duration-300">
                                     TyB
                                 </div>
-                                <h3 className="text-xl font-bold text-text-primary mb-2">TextYourBoss.ai</h3>
-                                <p className="text-text-secondary text-sm mb-6 flex-grow">
+                                <h3 className="text-xl font-bold text-text-primary mb-3 relative z-10 group-hover:text-cascade-cyan transition-colors">TextYourBoss.ai</h3>
+                                <p className="text-text-secondary text-sm mb-6 flex-grow relative z-10 opacity-90 leading-relaxed">
                                     {/* @ts-ignore */}
                                     {translations[lang]?.body?.textYourBossShortDesc || "An AI-powered communication tool simplifying professional messaging and workflow automation."}
                                 </p>
-                                <div className="flex flex-wrap gap-2 mt-auto">
-                                    <span className="px-2 py-1 text-xs font-mono text-cascade-blue bg-cascade-blue/10 rounded-md">OpenAI</span>
-                                    <span className="px-2 py-1 text-xs font-mono text-cascade-violet bg-cascade-violet/10 rounded-md">Python</span>
+                                <div className="flex flex-wrap gap-2 mt-auto relative z-10">
+                                    <span className="px-2 py-1 text-[10px] font-mono tracking-tighter text-cascade-blue bg-cascade-blue/10 border border-cascade-blue/20 rounded-md">OPEN_AI</span>
+                                    <span className="px-2 py-1 text-[10px] font-mono tracking-tighter text-cascade-violet bg-cascade-violet/10 border border-cascade-violet/20 rounded-md">PYTHON_SYS</span>
                                 </div>
+
+                                <div className="absolute top-0 right-0 w-12 h-12 border-r border-t border-cascade-cyan/20 rounded-tr-2xl pointer-events-none" />
                             </GlassCard>
                         </div>
                     </motion.div>

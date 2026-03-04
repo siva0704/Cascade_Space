@@ -32,7 +32,7 @@ export function LanguageSwitcher() {
     const { lang, setLang } = useLanguage();
 
     return (
-        <div className="absolute inset-0 z-40 pointer-events-none hidden lg:block">
+        <div className="absolute inset-0 z-40 pointer-events-none">
             {/* Origin = visual center of the 3D stack container */}
             <div className="absolute top-1/2 left-1/2">
                 {nodeConfig.map(({ lang: l, x, y, anchorX, anchorY, delay, neonColor, neonShadow }, i) => {

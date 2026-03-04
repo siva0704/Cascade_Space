@@ -21,9 +21,9 @@ const en = {
         description: "Cascade Space specializes in building advanced software, web platforms, and artificial intelligence solutions that empower businesses to innovate, streamline operations, and achieve sustainable growth.",
         cta1: "Explore Our Expertise",
         cta2: "Engage Our Consultants",
-        trustPowered: "AI Powered",
-        trustUptime: "99.9% Uptime",
-        trustSupport: "24/7 Support",
+        trustPowered: "AI-Powered",
+        trustUptime: "99.9% Reliable",
+        trustSupport: "Expert Support",
     },
 
     // --- HOME SECTIONS ---
@@ -40,21 +40,21 @@ const en = {
         servicesLabel: "Our Services",
         servicesTitle: "Ready to Transform Your Business?",
         servicesDesc: "Cascade Space delivers cutting-edge technology solutions designed to align with your business objectives. Our expertise spans from digital transformation to artificial intelligence, ensuring measurable outcomes at every stage of engagement.",
-        servicesBtn: "Explore All Services",
+        servicesBtn: "Explore Our Services",
 
-        hwwLabel: "Our Process",
-        hwwTitle: "How We Deliver Excellence",
-        hwwBody: "We follow a structured, iterative approach — from discovery to deployment — ensuring every solution is precise, scalable, and future-ready.",
+        hwwLabel: "OUR APPROACH",
+        hwwTitle: "From Complexity to Clarity",
+        hwwBody: "We don't deliver black boxes. Every solution we build follows a transparent, structured methodology designed to give you clarity at every stage — from first call to final deployment.",
 
-        techBridgeLabel: "From Service to Solution",
-        techBridgeBody: "We don't just build software. We architect ecosystems — connecting your brand, operations, and customers into one seamless, intelligent platform.",
-        techBridgeCta: "View Full Portfolio",
+        techBridgeLabel: "Technical Solutions",
+        techBridgeBody: "We guide organizations through comprehensive digital overhauls, migrating legacy systems to modern, scalable architectures.",
+        techBridgeCta: "View Our Services",
 
-        featuresLabel: "The Cascade Advantage",
-        featuresTitle: "Why Industry Leaders Choose Us",
+        featuresLabel: "Feature Cards",
+        featuresTitle: "The Cascade Advantage",
 
-        contactLabel: "Collaborate",
-        contactTitle: "Accelerate Your Digital Transformation",
+        contactLabel: "Get In Touch",
+        contactTitle: "Ready to Transform Your Business?",
 
         // Projects section
         projectsTitle: "Our Innovative Projects",
@@ -65,18 +65,18 @@ const en = {
 
     // --- ABOUT ---
     about: {
-        heroLabel: "Our Story",
-        heroTitle: "Pioneering the Future of Digital",
-        heroDesc: "We are a team of engineers, designers, and strategists on a mission to solve complex digital challenges.",
+        heroLabel: "About Cascade Space",
+        heroTitle: "Empowering Businesses Through Technology & Innovation",
+        heroDesc: "We build smart digital solutions that enhance productivity, efficiency, and scalability for individuals, startups, and enterprises.",
 
-        visionLabel: "Vision",
-        visionTitle: "Where We're Headed",
-        missionLabel: "Mission",
-        missionTitle: "How We Get There",
+        visionLabel: "Future Vision",
+        visionTitle: "Becoming a Global Tech Powerhouse",
+        missionLabel: "Our Mission",
+        missionTitle: "Simplifying Complex Challenges Through Technology",
 
         visionMissionLabel: "Our Purpose",
-        visionBody: "To be the most trusted technology partner for businesses across India and beyond — building intelligent, accessible digital ecosystems.",
-        missionBody: "To decode the complexities of the digital era and deliver streamlined, intelligent systems that amplify human potential.",
+        visionBody: "Cascade Space is committed to building a future where innovation transcends boundaries. Our vision is to deliver world-class technology solutions with a transformative impact across industries and communities worldwide.",
+        missionBody: "At Cascade Space, our mission is to transform complexity into clarity. We are dedicated to enabling organizations to innovate, expand, and thrive through cost-effective, high-quality digital solutions.",
         visionBullet1: "AI-first solutions for every scale",
         visionBullet2: "Bridging India's digital divide",
         visionBullet3: "Leading next-gen EdTech and FinTech",
@@ -121,12 +121,12 @@ const en = {
         catDTF3: "Legacy System Modernization",
         catDTF4: "Workflow Automation",
 
-        catAITitle: "AI & Smart Solutions",
-        catAIDesc: "Leverage the power of artificial intelligence to automate complex tasks, generate predictive insights, and create personalized experiences at scale.",
-        catAIF1: "Custom LLM Integration & Fine-Tuning",
-        catAIF2: "Conversational AI & Chatbots",
-        catAIF3: "Predictive Data Analytics",
-        catAIF4: "Intelligent Process Automation",
+        catAITitle: "Intelligent AI & Agentic Solutions",
+        catAIDesc: "How can AI automate your business? We leverage Large Language Models (LLMs) to automate complex workflows, generate predictive insights, and create hyper-personalized customer experiences at scale.",
+        catAIF1: "Custom LLM Fine-Tuning & Integration",
+        catAIF2: "Intelligent Conversational Agents",
+        catAIF3: "Predictive Analytics Systems",
+        catAIF4: "AI-Driven Process Automation",
 
         catDBTitle: "Design & Branding",
         catDBDesc: "Your digital presence should reflect your ambition. We craft premium, user-centric interfaces and brand identities that resonate with your target audience.",
@@ -162,7 +162,7 @@ const en = {
     // --- PROJECTS PAGE ---
     projectsPage: {
         heroLabel: "Portfolio & Case Studies",
-        heroDesc: "Explore our featured products and client projects that showcase our commitment to scalablity, intelligent design, and flawless execution.",
+        heroDesc: "Explore our portfolio of digital platforms and tools designed to solve real-world problems and accelerate business growth.",
 
         startopiaTitle: "Startopia",
         startopiaDesc: "A comprehensive ecosystem designed to empower founders with resources, investor connections, and highly scalable technological platforms.",
@@ -199,8 +199,8 @@ const en = {
 
     // --- TEAM PAGE ---
     teamPage: {
-        heroLabel: "Our People",
-        heroDesc: "Meet the leadership team dedicated to transforming complex challenges into elegant, intelligent digital solutions.",
+        heroLabel: "Our Leadership",
+        heroDesc: "Meet our visionary leaders who are transforming how businesses leverage technology for growth and innovation.",
 
         akshayBio: "Akshay Kumar Ankalagi is the visionary CEO of CascadeTech Solutions, bringing extensive experience in technology leadership and business transformation. His strategic insights and forward-thinking approach have positioned CascadeTech as a leader in digital innovation. Akshay specializes in identifying market opportunities and developing solutions that create lasting value for clients across industries.",
         manojBio: "Manoj Relekar serves as the operational backbone of CascadeTech Solutions, bringing exceptional organizational leadership and process optimization expertise. With a background spanning technology and business operations, Manoj ensures that our service delivery consistently exceeds client expectations. His methodical approach to scaling operations has been instrumental in CascadeTech's sustainable growth trajectory.",
@@ -258,8 +258,8 @@ const en = {
         valIntegrity: "Integrity",
         valCollaboration: "Collaboration",
         visionSubtitle: "Architecting Tomorrow",
-        projectsHeroTitle: "Projects That Define Us",
-        teamHeroTitle: "The Minds Behind Cascade",
+        projectsHeroTitle: "Innovative Solutions That Drive Results",
+        teamHeroTitle: "The Team Behind CascadeTech Solutions",
         ctaBannerTitle: "Ready to Transform Your Digital Presence?",
         comingSoon: "Preparing for Launch",
         servicesHeroH1: "Intelligent Solutions for Modern Enterprise",

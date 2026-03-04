@@ -40,8 +40,8 @@ export function Footer() {
           {/* Column 1 — Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-5 group">
-              <img src={logo} alt="Cascade Space Logo" className="w-8 h-8 object-contain transition-transform duration-300 group-hover:scale-105" />
-              <span className="font-display font-bold text-lg text-text-primary">Cascade<span className="text-cascade-blue">Tech</span></span>
+              <img src={logo} alt="Cascade Tech Logo" className="w-8 h-8 object-contain transition-transform duration-300 group-hover:scale-105 invert brightness-[2]" />
+              <span className="font-display font-bold text-lg text-text-primary">Cascade<span className="text-cascade-blue">Tech Solutions</span></span>
             </Link>
             <p className="text-text-secondary text-sm leading-relaxed mb-6">
               {t('footer', 'desc')}

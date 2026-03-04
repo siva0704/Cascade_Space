@@ -62,8 +62,8 @@ export function Navbar() {
               <div className="relative flex items-center justify-center">
                 <img
                   src={logo}
-                  alt="Cascade Space"
-                  className="h-10 w-10 object-contain relative z-10 transition-transform duration-300 group-hover:scale-105"
+                  alt="Cascade Tech"
+                  className="h-10 w-10 object-contain relative z-10 transition-transform duration-300 group-hover:scale-105 invert brightness-[2]"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<span class="text-2xl font-bold bg-gradient-to-tr from-cascade-blue to-cascade-cyan bg-clip-text text-transparent">C</span>';
@@ -71,7 +71,7 @@ export function Navbar() {
                 />
               </div>
               <span className="font-display font-bold text-xl tracking-tight text-text-primary">
-                Cascade<span className="text-cascade-blue">Tech</span>
+                Cascade<span className="text-cascade-blue">Tech Solutions</span>
               </span>
             </Link>
 

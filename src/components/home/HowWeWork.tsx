@@ -60,18 +60,24 @@ export function HowWeWork() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.3, delay: idx * 0.05 }}
                         >
-                            <GlassCard className={`h-full flex flex-col gap-4 p-8 group border-cascade-border transition-all duration-300 ${step.borderHover} ${step.glow}`}>
+                            <GlassCard className={`h-full flex flex-col gap-4 p-8 group border-cascade-border transition-all duration-300 relative overflow-hidden ${step.borderHover} ${step.glow}`}>
+                                {/* Wireframe accent */}
+                                <div className="absolute top-0 right-0 w-16 h-16 bg-white/[0.02] border-l border-b border-white/10 rotate-45 translate-x-8 -translate-y-8 pointer-events-none" />
+
                                 {/* Step number */}
-                                <div className="flex items-center justify-between mb-2">
-                                    <div className={`w-12 h-12 rounded-xl bg-cascade-void border border-cascade-border flex items-center justify-center transition-colors duration-300 ${step.color} ${step.borderHover}`}>
+                                <div className="flex items-center justify-between mb-2 relative z-10">
+                                    <div className={`w-12 h-12 rounded-xl bg-cascade-void/50 border border-cascade-border flex items-center justify-center transition-all duration-300 ${step.color} ${step.borderHover} group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(14,165,233,0.2)]`}>
                                         {step.icon}
                                     </div>
-                                    <span className={`font-mono text-3xl font-black opacity-20 ${step.color}`}>{stepNumbers[idx]}</span>
+                                    <span className={`font-mono text-3xl font-black opacity-10 ${step.color} group-hover:opacity-25 transition-opacity duration-300`}>{stepNumbers[idx]}</span>
                                 </div>
                                 {/* Use translated title from hwwSteps array, or English fallback */}
-                                <h3 className="text-lg font-bold text-text-primary">{stepTitles?.[idx] || ["Deep Discovery", "Strategic Architecture", "Precision Engineering", "Launch & Scale"][idx]}</h3>
+                                <h3 className="text-lg font-bold text-text-primary relative z-10">{stepTitles?.[idx] || ["Deep Discovery", "Strategic Architecture", "Precision Engineering", "Launch & Scale"][idx]}</h3>
                                 {/* Use translated body from hwwStepBody1–4 keys */}
-                                <p className="text-text-secondary text-sm leading-relaxed flex-grow">{t('body', `hwwStepBody${idx + 1}` as any)}</p>
+                                <p className="text-text-secondary text-sm leading-relaxed flex-grow relative z-10 opacity-90">{t('body', `hwwStepBody${idx + 1}` as any)}</p>
+
+                                {/* Interactive floor line */}
+                                <div className={`absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-transparent via-cascade-blue to-transparent w-full scale-x-0 group-hover:scale-x-100 transition-transform duration-500 opacity-50`} />
                             </GlassCard>
                         </motion.div>
                     ))}

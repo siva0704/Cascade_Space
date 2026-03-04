@@ -62,17 +62,23 @@ export function FeatureCards() {
                 >
                     {features.map((feature, idx) => (
                         <motion.div key={idx} variants={itemVariants}>
-                            <GlassCard className="h-full flex flex-col group p-6 xl:p-8">
-                                <div className={`w-12 h-12 rounded-xl bg-cascade-surface border border-cascade-border flex items-center justify-center mb-6 transition-colors duration-300 ${feature.color} ${feature.bgHover}`}>
+                            <GlassCard className="h-full flex flex-col group p-6 sm:p-7 md:p-8 relative overflow-hidden">
+                                {/* Wireframe background element */}
+                                <div className="absolute top-0 right-0 w-24 h-24 bg-cascade-blue/5 -rotate-12 translate-x-8 -translate-y-8 border-[0.5px] border-cascade-blue/20 pointer-events-none" />
+
+                                <div className={`w-12 h-12 rounded-xl bg-cascade-void/50 border border-cascade-border flex items-center justify-center mb-6 transition-all duration-300 relative z-10 ${feature.color} ${feature.bgHover} group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(14,165,233,0.3)]`}>
                                     {feature.icon}
                                 </div>
-                                <h3 className="text-lg font-semibold text-text-primary mb-3 group-hover:text-cascade-blue transition-colors duration-300">
+                                <h3 className="text-lg font-bold text-text-primary mb-3 group-hover:text-cascade-blue transition-colors duration-300 relative z-10">
                                     {translations[lang]?.homeFeatures?.[idx] || feature.title}
                                 </h3>
                                 {/* @ts-ignore */}
-                                <p className="text-text-secondary text-sm leading-relaxed flex-grow">
+                                <p className="text-text-secondary text-sm leading-relaxed flex-grow relative z-10 opacity-90">
                                     {translations[lang]?.homeFeatureDescs?.[idx] || feature.description}
                                 </p>
+
+                                {/* Bottom wireframe line */}
+                                <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-cascade-border to-transparent opacity-50" />
                             </GlassCard>
                         </motion.div>
                     ))}
