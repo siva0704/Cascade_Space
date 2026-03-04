@@ -5,19 +5,19 @@ import { GradientText } from "@/components/ui/GradientText";
 import { ExternalLink } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const projects = [
+const getProjects = (t: any) => [
     {
-        title: "Startopia",
-        description: "A comprehensive ecosystem designed to empower founders with resources, investor connections, and highly scalable technological platforms.",
+        title: t('projectsPage', 'startopiaTitle'),
+        description: t('projectsPage', 'startopiaDesc'),
         tags: ["React", "Node.js", "PostgreSQL", "AWS"],
-        features: ["End-to-End Encryption", "Automated Matchmaking", "Real-time Analytics", "Scalable Microservices"],
+        features: [t('projectsPage', 'startopiaFeat1'), t('projectsPage', 'startopiaFeat2'), t('projectsPage', 'startopiaFeat3'), t('projectsPage', 'startopiaFeat4')],
         accentColor: "cascade-cyan",
     },
     {
-        title: "TextYourBoss.ai",
-        description: "An AI-powered communication tool simplifying professional messaging, workflow automation, and context-aware responses for enterprise teams.",
+        title: t('projectsPage', 'textYourBossTitle'),
+        description: t('projectsPage', 'textYourBossDesc'),
         tags: ["Python", "OpenAI API", "React", "Next.js"],
-        features: ["Context-Aware AI Generation", "Tone Adjustment Engine", "Multi-Platform Integration", "Enterprise Role-Based Access"],
+        features: [t('projectsPage', 'textYourBossFeat1'), t('projectsPage', 'textYourBossFeat2'), t('projectsPage', 'textYourBossFeat3'), t('projectsPage', 'textYourBossFeat4')],
         accentColor: "cascade-indigo",
     },
 ];
@@ -34,13 +34,18 @@ const tagColors: Record<string, string> = {
 
 export function ProjectsSection() {
     const { t, lang } = useLanguage();
+    const projects = getProjects(t);
     return (
         <section className="section-padding bg-cascade-void relative z-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-14">
                     <SectionLabel className="justify-center">{t('about', 'projectsLabel')}</SectionLabel>
                     <h2 className="mt-4">
-                        {t('about', 'projectsTitle').split('That ')[0]}That <GradientText>Define Us</GradientText>
+                        {lang === 'en' ? (
+                            <>{t('about', 'projectsTitle').split('That ')[0]}That <GradientText>Define Us</GradientText></>
+                        ) : (
+                            t('about', 'projectsTitle')
+                        )}
                     </h2>
                     <p className="text-text-secondary text-lg mt-4 max-w-2xl mx-auto">
                         {t('about', 'projectsBodyDesc')}

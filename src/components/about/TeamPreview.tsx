@@ -19,7 +19,7 @@ export function TeamPreview() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8 text-center md:text-left">
                     <div>
-                        <SectionLabel className="justify-center md:justify-start">Leadership</SectionLabel>
+                        <SectionLabel className="justify-center md:justify-start">{t('about', 'teamLabel')}</SectionLabel>
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}

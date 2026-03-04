@@ -5,13 +5,13 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  
+
   plugins: [
     react(),
     mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
-  base: "/Cascade-Space/",
+  base: "/",
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'), // Maps @ to src folder

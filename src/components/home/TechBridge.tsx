@@ -70,7 +70,8 @@ export function TechBridge() {
                                 </div>
                                 <h3 className="text-xl font-bold text-text-primary mb-2">Startopia</h3>
                                 <p className="text-text-secondary text-sm mb-6 flex-grow">
-                                    A comprehensive ecosystem designed to empower founders with resources and scalable platforms.
+                                    {/* @ts-ignore */}
+                                    {translations[lang]?.body?.startopiaShortDesc || "A comprehensive ecosystem designed to empower founders with resources and scalable platforms."}
                                 </p>
                                 <div className="flex flex-wrap gap-2 mt-auto">
                                     <span className="px-2 py-1 text-xs font-mono text-cascade-cyan bg-cascade-cyan/10 rounded-md">React</span>
@@ -85,7 +86,8 @@ export function TechBridge() {
                                 </div>
                                 <h3 className="text-xl font-bold text-text-primary mb-2">TextYourBoss.ai</h3>
                                 <p className="text-text-secondary text-sm mb-6 flex-grow">
-                                    An AI-powered communication tool simplifying professional messaging and workflow automation.
+                                    {/* @ts-ignore */}
+                                    {translations[lang]?.body?.textYourBossShortDesc || "An AI-powered communication tool simplifying professional messaging and workflow automation."}
                                 </p>
                                 <div className="flex flex-wrap gap-2 mt-auto">
                                     <span className="px-2 py-1 text-xs font-mono text-cascade-blue bg-cascade-blue/10 rounded-md">OpenAI</span>

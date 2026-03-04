@@ -64,7 +64,10 @@ export function ServicesPreview() {
                                     {/* @ts-ignore */}
                                     {translations[lang]?.servicesList?.[idx] || service.title}
                                 </h3>
-                                <p className="text-text-secondary mb-6 flex-grow">{service.text}</p>
+                                <p className="text-text-secondary mb-6 flex-grow">
+                                    {/* @ts-ignore */}
+                                    {translations[lang]?.servicesListDescs?.[idx] || service.text}
+                                </p>
                                 <Link to="/services" className="inline-flex items-center text-cascade-blue font-medium text-sm hover:text-cascade-cyan transition-colors group-hover:translate-x-1 duration-300 w-max">
                                     {t('cta', 'learnMore')} <ArrowRight size={16} className="ml-1" />
                                 </Link>

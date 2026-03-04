@@ -35,8 +35,8 @@ const Contact = () => {
       <section className="h-[400px] w-full bg-cascade-deep border-t border-cascade-border relative overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 bg-grid-overlay opacity-10" />
         <div className="text-center z-10 glass-card p-6">
-          <p className="text-text-primary font-semibold text-lg">CascadeTech Solutions HQ</p>
-          <p className="text-text-muted text-sm mt-1 font-mono uppercase tracking-wider">Vidya-Nagar, Hubballi</p>
+          <p className="text-text-primary font-semibold text-lg">{t('contact', 'hqTitle')}</p>
+          <p className="text-text-muted text-sm mt-1 font-mono uppercase tracking-wider">{t('contact', 'hqLocation')}</p>
         </div>
       </section>
 

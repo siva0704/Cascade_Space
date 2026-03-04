@@ -93,6 +93,8 @@ const en = {
         projectsTitle: "Projects That Define Us",
         projectsBodyDesc: "A showcase of solutions built with precision — every project a testament to our engineering culture.",
         projectsComingSoon: "More innovations coming soon ✦",
+        ctaBannerTitle: "Let's Build Something Extraordinary",
+        ctaBannerDesc: "Partner with CascadeTech to transform your vision into a world-class digital product.",
     },
 
     // --- SERVICES ---
@@ -145,6 +147,8 @@ const en = {
 
         formResponseTime: "We'll get back to you within 24–48 hours.",
         businessHours: "Monday–Friday, 9am–5pm IST",
+        hqTitle: "CascadeTech Solutions HQ",
+        hqLocation: "Vidya-Nagar, Hubballi",
     },
 
     // --- PROJECTS PAGE ---

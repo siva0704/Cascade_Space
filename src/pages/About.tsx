@@ -5,8 +5,11 @@ import { ValuesSection } from "@/components/about/ValuesSection";
 import { FullTeamSection } from "@/components/about/FullTeamSection";
 import { ProjectsSection } from "@/components/about/ProjectsSection";
 import { CTABanner } from "@/components/ui/CTABanner";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const About = () => {
+  const { t } = useLanguage();
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -21,8 +24,8 @@ const About = () => {
       <FullTeamSection />
       <ProjectsSection />
       <CTABanner
-        title="Let's Build Something Extraordinary"
-        description="Partner with CascadeTech to transform your vision into a world-class digital product."
+        title={t('about', 'ctaBannerTitle')}
+        description={t('about', 'ctaBannerDesc')}
       />
     </motion.div>
   );

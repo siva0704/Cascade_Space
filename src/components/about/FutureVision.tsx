@@ -23,10 +23,10 @@ export function FutureVision() {
                         {t('headings', 'visionSubtitle')}
                     </h2>
                     <p className="text-xl text-text-secondary mb-12 leading-relaxed text-balance">
-                        We look beyond the immediate constraints of technology. By investing in AI ecosystems, smart automation, and renewable tech solutions, Cascade Space is dedicated to creating sustainable infrastructure that shapes the next decade of digital evolution.
+                        {t('headings', 'futureVisionBody')}
                     </p>
                     <Link to="/projects" className="btn-primary inline-flex items-center gap-2">
-                        See Our Upcoming Innovations <ArrowRight size={18} />
+                        {t('headings', 'futureVisionCta')} <ArrowRight size={18} />
                     </Link>
                 </motion.div>
             </div>
