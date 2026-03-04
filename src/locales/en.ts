@@ -323,10 +323,12 @@ const en = {
         techBridgeBen3: "Scalable cloud architecture",
         techBridgeBen4: "Premium UI/UX design systems",
 
-        // HowWeWork step bodies
-        hwwStepBody1: "We architect every solution with care — scalable microservices, clean APIs, and future-proof stacks.",
-        hwwStepBody2: "Rapid launch with monitoring, analytics, and a growth roadmap built from day one.",
-        
+        // HowWeWork step bodies (steps 1–4)
+        hwwStepBody1: "We begin by mapping your business landscape — your goals, constraints, and the real problems beneath the surface. No assumptions, no shortcuts.",
+        hwwStepBody2: "Our technical team designs a scalable, future-proof solution blueprint. Every technology decision is deliberate, documented, and aligned to your business outcomes.",
+        hwwStepBody3: "We build in sprints with continuous feedback loops. You see progress, not just promises — with working deliverables at every milestone.",
+        hwwStepBody4: "Deployment is the beginning, not the end. We provide post-launch support, performance monitoring, and iterative improvements as your business scales.",
+
         // HowWeWork main body
         howWeWorkBody: "We follow a structured, iterative approach — from discovery to deployment — ensuring every solution is precise, scalable, and future-ready.",
 
