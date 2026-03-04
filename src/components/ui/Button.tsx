@@ -29,7 +29,7 @@ export const buttonVariants = cva(
 
 // Define a type that allows for component polymorphism
 type PolymorphicRef<C extends ElementType> = React.ComponentPropsWithRef<C>["ref"];
-type PolymorphicComponentProps<C extends ElementType, Props = {}> = Props & 
+type PolymorphicComponentProps<C extends ElementType, Props = {}> = Props &
   Omit<ComponentPropsWithoutRef<C>, keyof Props> & {
     as?: C;
   };
@@ -46,18 +46,18 @@ export type ButtonProps<C extends ElementType = "button"> = PolymorphicComponent
 
 // The actual Button component implementation using generics
 const Button = forwardRef(function Button<C extends ElementType = "button">(
-  { 
-    className, 
-    variant = "default", 
-    size = "default", 
-    isLoading = false, 
-    as, 
-    ...props 
-  }: ButtonProps<C>, 
+  {
+    className,
+    variant = "default",
+    size = "default",
+    isLoading = false,
+    as,
+    ...props
+  }: ButtonProps<C>,
   ref: PolymorphicRef<C>
 ) {
   const Component = as || "button";
-  
+
   return (
     <Component
       className={cn(

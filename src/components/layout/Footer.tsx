@@ -1,110 +1,132 @@
-import { Container } from "@/components/ui/Container";
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Linkedin, Instagram } from "lucide-react";
+import { Linkedin, Instagram, Mail, MapPin } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/locales/translations";
+
+const companyLinksKeys = [
+  { key: "about", to: "/about" },
+  { key: "services", to: "/services" },
+  { key: "projects", to: "/projects" },
+  { key: "team", to: "/team" },
+  { key: "contact", to: "/contact" },
+];
+
+const serviceLinks = [
+  { label: "Website Development", to: "/services" },
+  { label: "Web Design & UI/UX", to: "/services" },
+  { label: "Software Development", to: "/services" },
+  { label: "AI & Chatbot Development", to: "/services" },
+  { label: "Educational Technology", to: "/services" },
+  { label: "Loyalty Program Solutions", to: "/services" },
+];
+
+const socials = [
+  { icon: <Linkedin size={18} />, href: "https://linkedin.com/company/cascade-technologies", label: "LinkedIn" },
+  { icon: <Instagram size={18} />, href: "https://instagram.com/Cascade_Teachno", label: "Instagram" },
+];
+
 export function Footer() {
-  return <footer className="bg-slate-50 border-t border-slate-200">
-      <Container className="py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-          <div className="md:col-span-1">
-            <Link to="/" className="flex items-center gap-2">
-              <img src={logo} alt="CascadeTech Logo" className="h-10" />
-              <span className="text-xl font-display font-bold text-cascade-950">
-                <span className="text-cascade-600">CascadeTech</span> Solutions
-              </span>
+  const { t, lang } = useLanguage();
+
+  return (
+    <footer className="bg-cascade-deep border-t border-cascade-border relative overflow-hidden">
+      {/* Top gradient line */}
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cascade-blue/40 to-transparent" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+          {/* Column 1 — Brand */}
+          <div className="lg:col-span-1">
+            <Link to="/" className="flex items-center gap-3 mb-5 group">
+              <img src={logo} alt="Cascade Space Logo" className="w-8 h-8 object-contain transition-transform duration-300 group-hover:scale-105" />
+              <span className="font-display font-bold text-lg text-text-primary">Cascade<span className="text-cascade-blue">Tech</span></span>
             </Link>
-            <p className="mt-4 text-slate-600 max-w-md">
-Empowering businesses through cutting-edge technology, specializing in web design, software development, and intelligent digital solutions.            </p>
-            <div className="mt-6 flex space-x-4">
-              <a href="https://linkedin.com/company/cascade-technologies" target="_blank" rel="noopener noreferrer" className="h-10 w-10 flex items-center justify-center rounded-full bg-white shadow-sm border border-slate-200 text-slate-600 hover:text-cascade-600 transition-colors">
-                <Linkedin size={18} />
-              </a>
-              <a href="https://instagram.com/Cascade_Teachno" target="_blank" rel="noopener noreferrer" className="h-10 w-10 flex items-center justify-center rounded-full bg-white shadow-sm border border-slate-200 text-slate-600 hover:text-cascade-600 transition-colors">
-                <Instagram size={18} />
-              </a>
+            <p className="text-text-secondary text-sm leading-relaxed mb-6">
+              {t('footer', 'desc')}
+            </p>
+            {/* Socials */}
+            <div className="flex gap-3">
+              {socials.map((s, idx) => (
+                <a key={idx} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}
+                  className="w-10 h-10 rounded-lg border border-cascade-border bg-cascade-void flex items-center justify-center text-text-secondary hover:text-cascade-blue hover:border-cascade-blue/40 transition-all duration-300">
+                  {s.icon}
+                </a>
+              ))}
             </div>
           </div>
 
+          {/* Column 2 — Company */}
           <div>
-            <h4 className="text-base font-semibold mb-4 text-slate-900">Company</h4>
+            <h4 className="text-text-primary font-bold text-sm uppercase tracking-widest mb-5">{t('footer', 'company')}</h4>
             <ul className="space-y-3">
-              <li>
-                <Link to="/about" className="text-slate-600 hover:text-cascade-600 transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-slate-600 hover:text-cascade-600 transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                {/* <Link to="/team" className="text-slate-600 hover:text-cascade-600 transition-colors">
-                  Our Team
-                </Link> */}
-              </li>
-              <li>
-                <Link to="/contact" className="text-slate-600 hover:text-cascade-600 transition-colors">
-                  Contact
-                </Link>
-              </li>
+              {companyLinksKeys.map(link => (
+                <li key={link.to}>
+                  <Link to={link.to} className="text-text-secondary text-sm hover:text-cascade-blue transition-colors duration-200">
+                    {t('nav', link.key)}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
+          {/* Column 3 — Services */}
           <div>
-            <h4 className="text-base font-semibold mb-4 text-slate-900">Services</h4>
+            <h4 className="text-text-primary font-bold text-sm uppercase tracking-widest mb-5">{t('footer', 'services')}</h4>
             <ul className="space-y-3">
-              <li>
-                <a href="/services" className="text-slate-600 hover:text-cascade-600 transition-colors">
-                  Website Development
-                </a>
-              </li>
-              <li>
-                <a href="/services" className="text-slate-600 hover:text-cascade-600 transition-colors">
-                  Web Design & UI/UX
-                </a>
-              </li>
-              <li>
-                <a href="/services" className="text-slate-600 hover:text-cascade-600 transition-colors">
-                  Software Development
-                </a>
-              </li>
-              <li>
-                <a href="/services" className="text-slate-600 hover:text-cascade-600 transition-colors">
-                  AI & Chatbot Development
-                </a>
-              </li>
-              <li>
-                <a href="/services" className="text-slate-600 hover:text-cascade-600 transition-colors">Educational Technology</a>
-              </li>
-              <li>
-                <a href="/services" className="text-slate-600 hover:text-cascade-600 transition-colors">
-                  Loayalty Program Solutions
-                </a>
-              </li>
+              {[
+                { key: 'footerSvcWebDev', to: "/services" },
+                { key: 'footerSvcWebDesign', to: "/services" },
+                { key: 'footerSvcSoftDev', to: "/services" },
+                { key: 'footerSvcAI', to: "/services" },
+                { key: 'footerSvcEdTech', to: "/services" },
+                { key: 'footerSvcLoyalty', to: "/services" },
+              ].map(link => (
+                <li key={link.key}>
+                  <Link to={link.to} className="text-text-secondary text-sm hover:text-cascade-blue transition-colors duration-200">
+                    {/* @ts-ignore */}
+                    {t('body', link.key)}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
+          {/* Column 4 — Contact */}
           <div>
-            <h4 className="text-base font-semibold mb-4 text-slate-900">Contact</h4>
-            <ul className="space-y-3">
-              <li className="flex items-start space-x-3">
-                <Mail size={18} className="text-cascade-600 mt-0.5" />
-                <span className="text-slate-600">cascadetechnologiessolutions@gmail.com</span>
+            <h4 className="text-text-primary font-bold text-sm uppercase tracking-widest mb-5">{t('footer', 'contact')}</h4>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <Mail size={16} className="text-cascade-blue flex-shrink-0 mt-0.5" />
+                <a href="mailto:cascadetechnologiessolutions@gmail.com"
+                  className="text-text-secondary text-sm hover:text-cascade-blue transition-colors break-all">
+                  cascadetechnologiessolutions@gmail.com
+                </a>
               </li>
-              <li className="flex items-start space-x-3">
-                <MapPin size={18} className="text-cascade-600 mt-0.5" />
-                <span className="text-slate-600">
-                  Vidya-Nagar Hubbali, Karnataka, India
+              <li className="flex items-start gap-3">
+                <MapPin size={16} className="text-cascade-blue flex-shrink-0 mt-0.5" />
+                <span className="text-text-secondary text-sm leading-relaxed">
+                  Vidya-Nagar Hubbali,<br />Karnataka, India
                 </span>
               </li>
             </ul>
           </div>
-        </div>
 
-        <div className="mt-12 pt-8 border-t border-slate-200 text-center text-bold text-slate-500">
-          <p>© {new Date().getFullYear()} CascadeTech Solutions. All rights reserved.</p>
         </div>
-      </Container>
-    </footer>;
+      </div>
+
+      {/* Bottom bar */}
+      <div className="border-t border-cascade-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-text-muted text-sm">
+            © {new Date().getFullYear()} {t('footer', 'rights')}
+          </p>
+          <p className="text-text-muted text-xs font-mono tracking-wider uppercase opacity-50">
+            {t('footer', 'tagline')}
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
 }

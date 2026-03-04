@@ -12,7 +12,7 @@ export function Projects() {
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 animate-fade-in">
             Our Innovative Projects
           </h2>
-          <p className="mt-4 text-lg text-slate-600 animate-fade-in [animation-delay:150ms]">
+          <p className="mt-4 text-lg text-slate-600 animate-fade-in [animation-delay: 45ms]">
             Discover our cutting-edge platforms and tools designed to solve 
             real-world problems and drive business growth.
           </p>
@@ -20,7 +20,7 @@ export function Projects() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Startopia */}
-          <div className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition-all duration-300 animate-slide-up [animation-delay:300ms]">
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition-all duration-300 animate-slide-up [animation-delay: 90ms]">
             <div className="aspect-w-16 aspect-h-9 bg-slate-100">
               <div className="w-full h-full bg-gradient-to-r from-cascade-100 to-cascade-50 flex items-center justify-center p-8">
                 <div className="text-4xl font-display font-bold text-cascade-800">Startopia</div>
@@ -56,7 +56,7 @@ export function Projects() {
           </div>
 
           {/* TextYourBoss.ai */}
-          <div className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition-all duration-300 animate-slide-up [animation-delay:450ms]">
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition-all duration-300 animate-slide-up [animation-delay: 135ms]">
             <div className="aspect-w-16 aspect-h-9 bg-slate-100">
               <div className="w-full h-full bg-gradient-to-r from-cascade-50 to-cascade-100 flex items-center justify-center p-8">
                 <div className="text-4xl font-display font-bold text-cascade-800">TextYourBoss.ai</div>

@@ -43,19 +43,19 @@ export function Services() {
       {/* Background Elements */}
       <div className="absolute top-20 left-0 w-1/3 h-80 bg-cascade-50 rounded-full blur-3xl -z-10 opacity-50"></div>
       <div className="absolute bottom-20 right-0 w-1/3 h-80 bg-cascade-50 rounded-full blur-3xl -z-10 opacity-50"></div>
-      
+
       <Container>
         <div className="max-w-3xl mx-auto text-center mb-16">
           <div className="inline-flex items-center px-3 py-1 mb-4 rounded-full bg-cascade-50 border border-cascade-100 text-cascade-700 text-sm font-medium animate-fade-in">
             Our Services
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 animate-fade-in [animation-delay:150ms]">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 animate-fade-in [animation-delay: 45ms]">
             Ready to Transform Your Business?
           </h2>
-          <p className="mt-4 text-lg text-slate-600 animate-fade-in [animation-delay:300ms]">
+          <p className="mt-4 text-lg text-slate-600 animate-fade-in [animation-delay: 90ms]">
             Cascade Space delivers cutting-edge technology solutions designed to align with your business objectives. Our expertise spans from digital transformation to artificial intelligence, ensuring measurable outcomes at every stage of engagement.
           </p>
-          <div className="mt-8 animate-fade-in [animation-delay:450ms]">
+          <div className="mt-8 animate-fade-in [animation-delay: 135ms]">
             <Button as={Link} to="/services" className="shadow-lg hover:shadow-xl">
               Explore Our Services <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
@@ -64,7 +64,7 @@ export function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => (
-            <div 
+            <div
               key={service.title}
               className="bg-white rounded-xl shadow-sm border border-slate-100 p-6 hover:shadow-md transition-all duration-300 animate-slide-up"
               style={{ animationDelay: `${index * 100 + 300}ms` }}
