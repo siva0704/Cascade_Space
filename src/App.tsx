@@ -4,6 +4,8 @@ import { MainLayout } from "./components/layout/MainLayout";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
+import Projects from "./pages/Projects";
+import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import { Toaster } from "@/components/ui/sonner";
@@ -22,8 +24,8 @@ const AnimatedRoutes = () => {
         <Route path="/" element={<Index />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/projects" element={<About />} />
-        <Route path="/team" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/team" element={<Team />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
@@ -35,7 +37,7 @@ function App() {
   return (
     <LanguageProvider>
       <QueryClientProvider client={queryClient}>
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
           <MainLayout>
             <AnimatedRoutes />
           </MainLayout>
