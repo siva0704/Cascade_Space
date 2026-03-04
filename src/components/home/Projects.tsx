@@ -3,18 +3,20 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Projects() {
+  const { t } = useLanguage();
+  
   return (
     <section className="section-padding bg-slate-50 relative overflow-hidden">
       <Container>
         <div className="max-w-xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 animate-fade-in">
-            Our Innovative Projects
+            {t('home', 'projectsTitle')}
           </h2>
           <p className="mt-4 text-lg text-slate-600 animate-fade-in [animation-delay: 45ms]">
-            Discover our cutting-edge platforms and tools designed to solve 
-            real-world problems and drive business growth.
+            {t('home', 'projectsDesc')}
           </p>
         </div>
 
@@ -29,27 +31,25 @@ export function Projects() {
             <div className="p-8">
               <h3 className="text-2xl font-semibold text-slate-900">Startopia</h3>
               <p className="mt-3 text-slate-600">
-                A comprehensive platform connecting startups with investors, 
-                mentors, and essential services to accelerate growth and 
-                secure funding.
+                {t('body', 'startopiaFullDesc')}
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
                 <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-sm font-medium">
-                  Startup Growth
+                  {t('body', 'tagStartupGrowth')}
                 </span>
                 <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-sm font-medium">
-                  Investor Matching
+                  {t('body', 'tagInvestorMatching')}
                 </span>
                 <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-sm font-medium">
-                  Mentorship
+                  {t('body', 'tagMentorship')}
                 </span>
                 <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-sm font-medium">
-                  Funding
+                  {t('body', 'tagFunding')}
                 </span>
               </div>
               <div className="mt-8">
                 <Link to="/projects" className="inline-flex items-center text-cascade-600 font-medium">
-                  Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                  {t('home', 'projectsLearnMore')} <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </div>
             </div>
@@ -65,27 +65,25 @@ export function Projects() {
             <div className="p-8">
               <h3 className="text-2xl font-semibold text-slate-900">TextYourBoss.ai</h3>
               <p className="mt-3 text-slate-600">
-                An AI-powered platform providing instant business guidance, 
-                decision support, and strategic insights to entrepreneurs 
-                and executives.
+                {t('body', 'textYourBossFullDesc')}
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
                 <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-sm font-medium">
-                  Artificial Intelligence
+                  {t('body', 'tagAI')}
                 </span>
                 <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-sm font-medium">
-                  Business Guidance
+                  {t('body', 'tagBusinessGuidance')}
                 </span>
                 <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-sm font-medium">
-                  Decision Support
+                  {t('body', 'tagDecisionSupport')}
                 </span>
                 <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-sm font-medium">
-                  Strategy
+                  {t('body', 'tagStrategy')}
                 </span>
               </div>
               <div className="mt-8">
                 <Link to="/projects" className="inline-flex items-center text-cascade-600 font-medium">
-                  Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                  {t('home', 'projectsLearnMore')} <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </div>
             </div>
@@ -94,7 +92,7 @@ export function Projects() {
 
         <div className="mt-16 text-center">
           <Button as={Link} to="/projects">
-            View All Projects
+            {t('home', 'projectsViewAll')}
           </Button>
         </div>
       </Container>

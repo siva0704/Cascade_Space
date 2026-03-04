@@ -53,6 +53,12 @@ const en = {
 
         contactLabel: "Collaborate",
         contactTitle: "Accelerate Your Digital Transformation",
+
+        // Projects section
+        projectsTitle: "Our Innovative Projects",
+        projectsDesc: "Discover our cutting-edge platforms and tools designed to solve real-world problems and drive business growth.",
+        projectsViewAll: "View All Projects",
+        projectsLearnMore: "Learn more",
     },
 
     // --- ABOUT ---
@@ -266,6 +272,8 @@ const en = {
         missionPillarReliability: "Reliability",
         missionPillarReach: "Reach",
         missionPillarIntelligence: "Intelligence",
+        futureVisionBody: "We look beyond the immediate constraints of technology. By investing in AI ecosystems, smart automation, and renewable tech solutions, Cascade Space is committed to building sustainable infrastructure that shapes the next decade of digital growth.",
+        futureVisionCta: "View Our Upcoming Innovations",
     },
 
     // --- BODY TEXT ---
@@ -316,6 +324,24 @@ const en = {
         // HowWeWork step bodies
         hwwStepBody1: "We architect every solution with care — scalable microservices, clean APIs, and future-proof stacks.",
         hwwStepBody2: "Rapid launch with monitoring, analytics, and a growth roadmap built from day one.",
+
+        // Project descriptions for TechBridge section
+        startopiaShortDesc: "A comprehensive ecosystem designed to empower founders with resources and scalable platforms.",
+        textYourBossShortDesc: "An AI-powered communication tool simplifying professional messaging and workflow automation.",
+
+        // Full project descriptions
+        startopiaFullDesc: "A comprehensive platform connecting startups with investors, mentors, and essential services to accelerate growth and secure funding.",
+        textYourBossFullDesc: "An AI-powered platform providing instant business guidance, decision support, and strategic insights to entrepreneurs and executives.",
+
+        // Project tags
+        tagStartupGrowth: "Startup Growth",
+        tagInvestorMatching: "Investor Matching",
+        tagMentorship: "Mentorship",
+        tagFunding: "Funding",
+        tagAI: "Artificial Intelligence",
+        tagBusinessGuidance: "Business Guidance",
+        tagDecisionSupport: "Decision Support",
+        tagStrategy: "Strategy",
     },
 
     // --- ARRAYS ---

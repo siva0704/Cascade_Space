@@ -55,6 +55,12 @@ const hi: TranslationSchema = {
 
         contactLabel: "सहयोग",
         contactTitle: "अपने डिजिटल परिवर्तन को तेज़ करें",
+
+        // Projects section
+        projectsTitle: "हमारी नवाचार परियोजनाएं",
+        projectsDesc: "वास्तविक दुनिया की समस्याओं को हल करने और व्यावसायिक विकास को बढ़ावा देने के लिए डिज़ाइन किए गए हमारे अत्याधुनिक प्लेटफॉर्म और उपकरणों की खोज करें।",
+        projectsViewAll: "सभी परियोजनाएं देखें",
+        projectsLearnMore: "और जानें",
     },
     // --- ABOUT ---
     about: {
@@ -265,6 +271,8 @@ const hi: TranslationSchema = {
         missionPillarReliability: "विश्वसनीयता",
         missionPillarReach: "पहुंच",
         missionPillarIntelligence: "बुद्धिमत्ता",
+        futureVisionBody: "हम तकनीक की तत्काल बाधाओं से परे देखते हैं। AI पारिस्थितिकी तंत्र, स्मार्ट स्वचालन और नवीकरणीय तकनीकी समाधानों में निवेश करके, कैस्केड स्पेस स्थायी बुनियादी ढांचा बनाने के लिए समर्पित है जो डिजिटल विकास के अगले दशक को आकार देता है।",
+        futureVisionCta: "हमारे आगामी नवाचार देखें",
     },
 
     // --- BODY TEXT ---
@@ -306,10 +314,6 @@ const hi: TranslationSchema = {
         footerSvcEdTech: "शैक्षिक तकनीक",
         footerSvcLoyalty: "लॉयल्टी प्रोग्राम समाधान",
 
-        // Project descriptions for TechBridge section
-        startopiaShortDesc: "संस्थापकों को संसाधनों और स्केलेबल प्लेटफॉर्म के साथ सशक्त बनाने के लिए डिज़ाइन किया गया एक व्यापक पारिस्थितिकी तंत्र।",
-        textYourBossShortDesc: "एक AI-संचालित संचार उपकरण जो पेशेवर संदेश और वर्कफ़्लो स्वचालन को सरल बनाता है।",
-
         // TechBridge benefits
         techBridgeBen1: "एंड-टू-एंड डिजिटल परिवर्तन",
         techBridgeBen2: "AI-संचालित स्वचालन और अंतर्दृष्टि",
@@ -319,6 +323,24 @@ const hi: TranslationSchema = {
         // HowWeWork step bodies
         hwwStepBody1: "हम हर समाधान को सावधानी से आर्किटेक्ट करते हैं — स्केलेबल माइक्रोसर्विसेज, स्वच्छ API, और भविष्य-प्रूफ स्टैक।",
         hwwStepBody2: "पहले दिन से निर्मित निगरानी, एनालिटिक्स और विकास रोडमैप के साथ तेज़ लॉन्च।",
+
+        // Project descriptions for TechBridge section
+        startopiaShortDesc: "संस्थापकों को संसाधनों और स्केलेबल प्लेटफॉर्म के साथ सशक्त बनाने के लिए डिज़ाइन किया गया एक व्यापक पारिस्थितिकी तंत्र।",
+        textYourBossShortDesc: "एक AI-संचालित संचार उपकरण जो पेशेवर संदेश और वर्कफ़्लो स्वचालन को सरल बनाता है।",
+
+        // Full project descriptions
+        startopiaFullDesc: "स्टार्टअप को निवेशकों, सलाहकारों और आवश्यक सेवाओं से जोड़ने वाला एक व्यापक प्लेटफॉर्म जो विकास को तेज़ करता है और फंडिंग सुरक्षित करता है।",
+        textYourBossFullDesc: "उद्यमियों और अधिकारियों को तत्काल व्यावसायिक मार्गदर्शन, निर्णय समर्थन और रणनीतिक अंतर्दृष्टि प्रदान करने वाला एक AI-संचालित प्लेटफॉर्म।",
+
+        // Project tags
+        tagStartupGrowth: "स्टार्टअप विकास",
+        tagInvestorMatching: "निवेशक मैचिंग",
+        tagMentorship: "सलाह",
+        tagFunding: "फंडिंग",
+        tagAI: "आर्टिफिशियल इंटेलिजेंस",
+        tagBusinessGuidance: "व्यावसायिक मार्गदर्शन",
+        tagDecisionSupport: "निर्णय समर्थन",
+        tagStrategy: "रणनीति",
     },
     // --- ARRAYS ---
     hwwSteps: [
