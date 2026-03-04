@@ -11,7 +11,8 @@ export default defineConfig(({ mode }) => ({
     mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
-  base: "/Cascade-Space/",
+  // Use "/" on Vercel (served from domain root), "/Cascade_Space/" for GitHub Pages
+  base: process.env.VERCEL ? "/" : "/Cascade_Space/",
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'), // Maps @ to src folder

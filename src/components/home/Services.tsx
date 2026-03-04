@@ -3,8 +3,12 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/locales/translations";
 
 export function Services() {
+  const { t, lang } = useLanguage();
+  
   const services = [
     {
       title: "Website Development",
@@ -47,17 +51,17 @@ export function Services() {
       <Container>
         <div className="max-w-3xl mx-auto text-center mb-16">
           <div className="inline-flex items-center px-3 py-1 mb-4 rounded-full bg-cascade-50 border border-cascade-100 text-cascade-700 text-sm font-medium animate-fade-in">
-            Our Services
+            {t('home', 'servicesLabel')}
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 animate-fade-in [animation-delay: 45ms]">
-            Ready to Transform Your Business?
+            {t('home', 'servicesTitle')}
           </h2>
           <p className="mt-4 text-lg text-slate-600 animate-fade-in [animation-delay: 90ms]">
-            Cascade Space delivers cutting-edge technology solutions designed to align with your business objectives. Our expertise spans from digital transformation to artificial intelligence, ensuring measurable outcomes at every stage of engagement.
+            {t('home', 'servicesDesc')}
           </p>
           <div className="mt-8 animate-fade-in [animation-delay: 135ms]">
             <Button as={Link} to="/services" className="shadow-lg hover:shadow-xl">
-              Explore Our Services <ArrowRight className="ml-2 h-4 w-4" />
+              {t('home', 'servicesBtn')} <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
         </div>
@@ -70,8 +74,14 @@ export function Services() {
               style={{ animationDelay: `${index * 100 + 300}ms` }}
             >
               <div className="text-3xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">{service.title}</h3>
-              <p className="text-slate-600">{service.description}</p>
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">
+                {/* @ts-ignore */}
+                {translations[lang]?.servicesList?.[index] || service.title}
+              </h3>
+              <p className="text-slate-600">
+                {/* @ts-ignore */}
+                {translations[lang]?.servicesListDescs?.[index] || service.description}
+              </p>
             </div>
           ))}
         </div>

@@ -39,6 +39,7 @@ const en = {
 
         servicesLabel: "Our Services",
         servicesTitle: "Ready to Transform Your Business?",
+        servicesDesc: "Cascade Space delivers cutting-edge technology solutions designed to align with your business objectives. Our expertise spans from digital transformation to artificial intelligence, ensuring measurable outcomes at every stage of engagement.",
         servicesBtn: "Explore All Services",
 
         hwwLabel: "Our Process",
@@ -325,6 +326,9 @@ const en = {
         // HowWeWork step bodies
         hwwStepBody1: "We architect every solution with care — scalable microservices, clean APIs, and future-proof stacks.",
         hwwStepBody2: "Rapid launch with monitoring, analytics, and a growth roadmap built from day one.",
+        
+        // HowWeWork main body
+        howWeWorkBody: "We follow a structured, iterative approach — from discovery to deployment — ensuring every solution is precise, scalable, and future-ready.",
 
         // Project descriptions for TechBridge section
         startopiaShortDesc: "A comprehensive ecosystem designed to empower founders with resources and scalable platforms.",
