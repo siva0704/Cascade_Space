@@ -24,6 +24,27 @@ const BUDGET_OPTIONS = [
     "Let's discuss",
 ];
 
+// ── Field wrapper — defined OUTSIDE component so React never remounts it ──
+interface FieldProps {
+    id: string;
+    icon: React.ElementType;
+    label: string;
+    required?: boolean;
+    children: React.ReactNode;
+}
+
+function Field({ id, icon: Icon, label, required, children }: FieldProps) {
+    return (
+        <div className="space-y-2">
+            <label htmlFor={id} className="text-xs font-semibold text-text-muted uppercase tracking-wider flex items-center gap-1.5">
+                <Icon size={12} className="text-cascade-blue" />
+                {label} {required && <span className="text-cascade-blue">*</span>}
+            </label>
+            <div className="relative">{children}</div>
+        </div>
+    );
+}
+
 type Status = "idle" | "submitting" | "success" | "error";
 
 export function ContactForm() {
@@ -45,10 +66,11 @@ export function ContactForm() {
         setErrorMsg("");
 
         try {
-            if (!APPS_SCRIPT_URL) throw new Error("Apps Script URL not configured.");
-
+            // Google Apps Script blocks CORS — use no-cors mode.
+            // We can't read the response, so we optimistically show success.
             await fetch(APPS_SCRIPT_URL, {
                 method: "POST",
+                mode: "no-cors",           // ← fixes CORS block
                 body: JSON.stringify(form),
             });
 
@@ -56,22 +78,11 @@ export function ContactForm() {
             setForm({ name: "", email: "", phone: "", company: "", service: "", budget: "", message: "" });
         } catch (err: any) {
             setStatus("error");
-            setErrorMsg(err.message || "Something went wrong. Please try again.");
+            setErrorMsg("Network error — please try emailing us directly.");
         }
     };
 
     const inputBase = "w-full bg-cascade-void border border-cascade-border rounded-xl px-4 py-3.5 pl-11 text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-cascade-blue/40 focus:border-cascade-blue transition-all text-sm";
-    const labelClass = "text-xs font-semibold text-text-muted uppercase tracking-wider mb-2 flex items-center gap-1.5";
-
-    const Field = ({ id, icon: Icon, label, required, children }: any) => (
-        <motion.div className="space-y-2" initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <label htmlFor={id} className={labelClass}>
-                <Icon size={12} className="text-cascade-blue" />
-                {label} {required && <span className="text-cascade-blue">*</span>}
-            </label>
-            <div className="relative">{children}</div>
-        </motion.div>
-    );
 
     if (status === "success") {
         return (
@@ -87,7 +98,8 @@ export function ContactForm() {
                     </motion.div>
                     <h3 className="text-2xl font-bold text-text-primary mb-3">Message Sent!</h3>
                     <p className="text-text-secondary text-sm leading-relaxed mb-8">
-                        Thanks for reaching out! Our team will review your message and get back to you within <span className="text-cascade-blue font-semibold">24 hours</span>.
+                        Thanks for reaching out! Our team will get back to you within{" "}
+                        <span className="text-cascade-blue font-semibold">24 hours</span>.
                     </p>
                     <button
                         onClick={() => setStatus("idle")}
@@ -106,7 +118,7 @@ export function ContactForm() {
                 {/* Header */}
                 <div className="mb-8 border-b border-cascade-border pb-6">
                     <div className="flex items-center gap-3 mb-2">
-                        <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: "linear-gradient(135deg,#0EA5E9,#06B6D4)" }}>
+                        <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style={{ background: "linear-gradient(135deg,#0EA5E9,#06B6D4)" }}>
                             <MessageSquare size={16} className="text-white" />
                         </div>
                         <h3 className="text-2xl font-bold text-text-primary">{t('headings', 'formTitle')}</h3>
