@@ -17,17 +17,19 @@ import { Button } from "@/components/ui/Button";
 import { Home, Info, Settings, Users, Mail } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { ScrollArea } from "@/components/ui/scroll-area";
-
-const menuItems = [
-  { name: "Home", href: "/", icon: Home },
-  { name: "About", href: "/about", icon: Info },
-  { name: "Services", href: "/services", icon: Settings },
-  { name: "Team", href: "/team", icon: Users },
-  { name: "Contact", href: "/contact", icon: Mail },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function AppSidebar() {
   const isMobile = useIsMobile();
+  const { t } = useLanguage();
+
+  const menuItems = [
+    { name: t('nav', 'home'), href: "/", icon: Home },
+    { name: t('nav', 'about'), href: "/about", icon: Info },
+    { name: t('nav', 'services'), href: "/services", icon: Settings },
+    { name: t('nav', 'team'), href: "/team", icon: Users },
+    { name: t('nav', 'contact'), href: "/contact", icon: Mail },
+  ];
 
   const closeSidebarMobile = () => {
     if (isMobile) {
@@ -82,7 +84,7 @@ export function AppSidebar() {
       <SidebarFooter className="p-4 sticky bottom-0 bg-sidebar/95 backdrop-blur-md">
         <Button asChild className="w-full">
           <Link to="/contact" onClick={closeSidebarMobile}>
-            Get Started
+            {t('nav', 'getStarted')}
           </Link>
         </Button>
       </SidebarFooter>

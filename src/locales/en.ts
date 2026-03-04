@@ -8,6 +8,7 @@ const en = {
         home: "Home",
         about: "About",
         services: "Services",
+        team: "Team",
         contact: "Contact",
         getStarted: "Get Started",
     },

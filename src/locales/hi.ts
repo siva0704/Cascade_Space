@@ -10,6 +10,7 @@ const hi: TranslationSchema = {
         home: "होम",
         about: "हमारे बारे में",
         services: "सेवाएं",
+        team: "टीम",
         contact: "संपर्क",
         getStarted: "शुरू करें",
     },
