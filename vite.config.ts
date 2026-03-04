@@ -19,7 +19,11 @@ export default defineConfig(({ mode }) => ({
     }
   },
   build: {
-    sourcemap: true, // Enable source maps
+    sourcemap: true,
+  },
+  define: {
+    // Injected at build time — used by cacheBuster.ts to detect new deployments
+    __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
   },
   server: {
     host: "::",
